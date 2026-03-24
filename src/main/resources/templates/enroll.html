@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Enroll</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+    <style>
+        body {
+            background: #f5f7fa;
+        }
+
+        .enroll-card {
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .enroll-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="#">🏥 Clinic</a>
+
+        <div class="ms-auto">
+            <a th:href="@{/home}" class="btn btn-light me-2">Home</a>
+            <a th:href="@{/logout}" class="btn btn-warning">Logout</a>
+        </div>
+    </div>
+</nav>
+
+<!-- CONTENT -->
+<div class="container mt-5">
+
+    <h2 class="text-center mb-4">📝 Enroll Courses</h2>
+    <p class="text-center text-muted">Khu vực dành cho bệnh nhân (PATIENT)</p>
+
+    <div class="row g-4 mt-3">
+
+        <!-- Demo Course -->
+        <div class="col-md-4">
+            <div class="card enroll-card p-3">
+                <h5>💊 Chăm sóc sức khỏe</h5>
+                <p class="text-muted">Kiến thức cơ bản về sức khỏe</p>
+                <button class="btn btn-success w-100">Đăng ký</button>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card enroll-card p-3">
+                <h5>🥗 Dinh dưỡng</h5>
+                <p class="text-muted">Chế độ ăn uống lành mạnh</p>
+                <button class="btn btn-success w-100">Đăng ký</button>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card enroll-card p-3">
+                <h5>🏃‍♂️ Thể dục</h5>
+                <p class="text-muted">Luyện tập nâng cao sức khỏe</p>
+                <button class="btn btn-success w-100">Đăng ký</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
